@@ -1,3 +1,4 @@
+// src/app/item/[id]/page.tsx
 import { supabase } from "@/lib/supabase"
 import Image from "next/image"
 import Link from "next/link"
