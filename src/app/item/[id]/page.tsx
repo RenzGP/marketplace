@@ -1,4 +1,3 @@
-import { Metadata } from "next"
 import { supabase } from "@/lib/supabase"
 import Image from "next/image"
 import Link from "next/link"
