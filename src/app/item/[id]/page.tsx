@@ -4,13 +4,11 @@ import Link from "next/link"
 
 export const dynamic = "force-dynamic"
 
-type PageProps = {
-  params: {
-    id: string
-  }
-}
-
-export default async function ItemDetailPage({ params }: PageProps) {
+export default async function ItemDetailPage({
+  params,
+}: {
+  params: { id: string }
+}) {
   const { data: listing, error } = await supabase
     .from("listings")
     .select("*")
@@ -39,7 +37,9 @@ export default async function ItemDetailPage({ params }: PageProps) {
         />
         <div className="space-y-3">
           <h1 className="text-2xl font-bold">{listing.title}</h1>
-          <p className="text-blue-600 font-semibold text-xl">₱{listing.price.toFixed(2)}</p>
+          <p className="text-blue-600 font-semibold text-xl">
+            ₱{listing.price.toFixed(2)}
+          </p>
           <p className="text-sm text-gray-500">{listing.category}</p>
           <p>{listing.description}</p>
           <p className="text-sm text-gray-600">Seller: {listing.seller_email}</p>
