@@ -1,7 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { Home, PlusCircle, LayoutList, HelpCircle, Tag } from "lucide-react"
+import { Home, PlusCircle, LayoutList, HelpCircle } from "lucide-react"
+
 
 export default function Sidebar() {
   return (
