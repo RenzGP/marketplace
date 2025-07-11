@@ -1,15 +1,11 @@
-// src/app/item/[id]/page.tsx
 import { supabase } from "@/lib/supabase"
 import Image from "next/image"
 import Link from "next/link"
 
 export const dynamic = "force-dynamic"
 
-export default async function ItemDetailPage({
-  params,
-}: {
-  params: { id: string }
-}) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function ItemDetailPage({ params }: any) {
   const { data: listing, error } = await supabase
     .from("listings")
     .select("*")
